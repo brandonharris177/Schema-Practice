@@ -9,14 +9,14 @@ module.exports = {
     },
     pool: {
       afterCreate: (conn, done) => {
-        conn.run("PRAGMA foreign_keys = ON", done)
+        conn.run('PRAGMA foreign_keys = ON', done);
       }
     },
     migrations: {
-      tableName: './data/migrations'
+      directory: "./data/migrations"
     },
     seeds: {
-      tableName: './data/seeds'
+      directory: "./data/seeds"
     }
   },
 
